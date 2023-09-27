@@ -7,5 +7,6 @@ public class AdminLogin {
 	@Test
 	public void adminLogin() {
 		System.out.println("----- Login as Admin -----");
+	
 	}
 }
