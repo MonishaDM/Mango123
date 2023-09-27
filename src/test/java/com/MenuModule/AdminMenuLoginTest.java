@@ -7,5 +7,6 @@ public class AdminMenuLoginTest {
 	@Test
 	public void adminMenu() {
 		System.out.println("---Test Script -1 ---");
+	
 	}
 }
