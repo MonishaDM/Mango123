@@ -20,7 +20,7 @@ public class ListenersImpleClass implements ITestListener{
 	ExtentReports report;
 	ExtentTest test;
 
-	@Override
+	
 	public void onTestStart(ITestResult result) {
 		//actual test scripts execution starts from here
 		
@@ -29,7 +29,7 @@ public class ListenersImpleClass implements ITestListener{
 		Reporter.log(MethodName+"---> Execution starts");
 	}
 
-	@Override
+	
 	public void onTestSuccess(ITestResult result) {
 		String MethodName = result.getMethod().getMethodName();
 		test.log(Status.PASS, MethodName+"---passed");
@@ -37,7 +37,7 @@ public class ListenersImpleClass implements ITestListener{
 		
 	}
 
-	@Override
+	
 	public void onTestFailure(ITestResult result) 
 	{
 		String MethodName = result.getMethod().getMethodName();
@@ -53,7 +53,7 @@ public class ListenersImpleClass implements ITestListener{
 		Reporter.log(MethodName+"----> Failed");
 	}
 
-	@Override
+
 	public void onTestSkipped(ITestResult result) {
 		String MethodName = result.getMethod().getMethodName();
 		test.log(Status.SKIP, result.getThrowable());
@@ -61,7 +61,7 @@ public class ListenersImpleClass implements ITestListener{
 		Reporter.log(MethodName+"----> Skipped");
 	}
 
-	@Override
+	
 	public void onStart(ITestContext context) 
 	{
 		ExtentSparkReporter htmlReport = new ExtentSparkReporter("./Extentreport/report.html");
@@ -78,13 +78,13 @@ public class ListenersImpleClass implements ITestListener{
 		report.setSystemInfo("Reporter_Name", "Monisha");
 	}
 
-	@Override
+	
 	public void onFinish(ITestContext context) {
 		
 		report.flush();
 	}
 
-	@Override
+	
 	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
 		// TODO Auto-generated method stub
 		
